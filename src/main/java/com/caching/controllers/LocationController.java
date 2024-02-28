@@ -30,7 +30,7 @@ public class LocationController {
      * @param address the address
      * @return the response entity
      */
-    @GetMapping("/geocoding")
+    @GetMapping("/geo")
     public ResponseEntity<LocationCoordinates> geocoding(@RequestParam Address address) {
         log.info("Geocoding {}", address);
         LocationCoordinates locationCoordinates = geolocationApi.getForwardGeocoding(address);
